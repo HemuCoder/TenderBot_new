@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>目录生成模块 - 调试页面</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --brand: #2563eb;
+      --ok: #22c55e;
+      --err: #ef4444;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    .wrap {
+      max-width: 1600px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 12px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    input,
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      color: var(--text);
+      background: #f1f5f9;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 10px;
+      padding: 10px 12px;
+      outline: none;
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.95), rgba(37, 99, 235, 0.80));
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 13px;
+    }
+
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    #stream-output {
+      min-height: 400px;
+    }
+
+    #output-log,
+    #final-output {
+      min-height: 200px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>目录生成模块 - 调试页面</h1>
+    <div class="main-grid">
+      <!-- 左栏: 流式输出 -->
+      <div class="card">
+        <div class="title">Agent 原始输出 (流式)</div>
+        <pre id="stream-output" class="muted" style="background:#f1f5f9; padding:12px; border-radius:10px;"></pre>
+      </div>
+
+      <!-- 右栏: 控制与日志 -->
+      <div class="card" style="display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <div class="title">通用配置</div>
+          <div class="row" style="gap:12px; align-items:flex-end; flex-wrap:wrap; margin-top:10px;">
+            <div style="min-width:260px;">
+              <div class="label">模型（默认 gpt-4.1-mini）</div>
+              <input id="model" list="model-list" placeholder="gpt-4.1-mini" style="width:260px;"
+                value="gpt-4.1-mini" />
+              <datalist id="model-list">
+                <option value="gpt-4.1-mini"></option>
+                <option value="gpt-4o-mini"></option>
+              </datalist>
+            </div>
+            <div style="min-width:200px;">
+              <div class="label">语言</div>
+              <select id="language" style="padding:10px 12px;">
+                <option value="zh" selected>简体中文</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="title">任务控制</div>
+          <div class="row" style="gap:12px;">
+            <button id="btn-full-catalog">🚀 生成完整目录</button>
+            <hr>
+            <button id="btn-framework">1. 生成框架</button>
+            <button id="btn-business">2. 生成商务目录</button>
+            <button id="btn-pricing">3. 生成报价目录</button>
+            <button id="btn-technical">4. 生成技术目录</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="label">运行日志 (高层事件)</div>
+          <pre id="output-log" class="muted" style="background:#f1f5f9; padding:12px; border-radius:10px;"></pre>
+        </div>
+        <div>
+          <div class="label">最终结果预览</div>
+          <div id="final-output"
+            style="border:1px solid rgba(15,23,42,0.15); border-radius:10px; padding:12px; overflow:auto;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modelEl = document.getElementById('model');
+    const languageEl = document.getElementById('language');
+    const btnFramework = document.getElementById('btn-framework');
+    const btnBusiness = document.getElementById('btn-business');
+    const btnLinker = document.getElementById('btn-linker');
+    const btnTechnical = document.getElementById('btn-technical');
+    const btnPricing = document.getElementById('btn-pricing');
+    const btnFullCatalog = document.getElementById('btn-full-catalog');
+    const outputLog = document.getElementById('output-log');
+    const finalOutput = document.getElementById('final-output');
+    const streamOutput = document.getElementById('stream-output');
+
+    const allButtons = [btnFramework, btnBusiness, btnTechnical, btnPricing, btnFullCatalog];
+
+    function parseEventData(data) {
+      try { return JSON.parse(data); } catch { return data; }
+    }
+
+    async function runStream(task) {
+      outputLog.textContent = `===== [${task}] 新一轮开始 =====\n`;
+      finalOutput.innerHTML = '';
+      allButtons.forEach(btn => btn.disabled = true);
+      streamOutput.textContent = '';
+
+      const payload = {
+        model: modelEl.value || 'gpt-4.1-mini',
+        language: languageEl.value || 'zh',
+      };
+
+      try {
+        const res = await fetch(`http://localhost:8001/api/catalog/${task}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'text/event-stream' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok || !res.body) {
+          outputLog.textContent += `请求失败: ${res.status}`;
+          allButtons.forEach(btn => btn.disabled = false);
+          return;
+        }
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let buf = '';
+
+        const appendLine = (line) => { outputLog.textContent += line + '\n'; };
+
+        const handleNote = (dataStr) => {
+          const d = parseEventData(dataStr);
+          const t = (d && d.text) ? `[${d.phase}] ${d.text}` : String(dataStr || '');
+          if (t) appendLine(t);
+        };
+
+        const handlePhase = (evName, dataStr) => {
+          const d = parseEventData(dataStr);
+          const name = (d && d.name) ? d.name : '';
+          if (evName === 'phase_start') appendLine(`\n>> 开始阶段: ${name}`);
+          if (evName === 'phase_end') appendLine(`<< 完成阶段: ${name}\n`);
+        };
+
+        const handleArtifact = (dataStr) => {
+          const d = parseEventData(dataStr) || {};
+          const fn = d.filename || d.id || '';
+          const ty = d.type || 'artifact';
+          appendLine(`[产物] ${ty}${fn ? ` - ${fn}` : ''}`);
+        };
+
+        const handleUpdate = (dataStr) => {
+          const d = parseEventData(dataStr) || {};
+          appendLine(`   - 进度: ${d.progress}`);
+        };
+
+        const handleComplete = (dataStr) => {
+          const d = parseEventData(dataStr) || {};
+          const finalText = d.final_output || '';
+          if (d.catalog || d.framework) {
+            finalOutput.innerHTML = `<pre>${JSON.stringify(d.catalog || d.framework, null, 2)}</pre>`;
+          } else {
+            finalOutput.textContent = finalText;
+          }
+          appendLine('--- 流程完成 ---');
+        };
+
+        const handleTokenDelta = (dataStr) => {
+          const d = parseEventData(dataStr);
+          if (d && d.delta) {
+            streamOutput.textContent += d.delta;
+          }
+        };
+
+        const handleStreamStartEnd = (evName) => {
+          if (evName === 'stream_start') streamOutput.textContent += '\n\n===== 新的文本块开始 =====\n';
+        };
+
+        const handleDebugLog = (dataStr) => {
+          const data = parseEventData(dataStr) || {};
+          const detailedLogContainer = document.getElementById('stream-output');
+
+          let content = `<div class="log-entry">`;
+          if (data.title) {
+            content += `<h5>${data.title}</h5>`;
+          }
+          if (data.log_id) {
+            content += `<pre id="${data.log_id}"></pre>`;
+          }
+          content += `</div>`;
+
+          detailedLogContainer.innerHTML += content;
+          detailedLogContainer.scrollTop = detailedLogContainer.scrollHeight;
+        };
+
+        const handleDebugTokenDelta = (dataStr) => {
+          const data = parseEventData(dataStr) || {};
+          if (data.log_id && data.delta) {
+            const logElement = document.getElementById(data.log_id);
+            if (logElement) {
+              logElement.textContent += data.delta;
+            }
+          }
+        };
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buf += decoder.decode(value, { stream: true });
+          let idx;
+          while ((idx = buf.indexOf('\n\n')) >= 0) {
+            const frame = buf.slice(0, idx);
+            buf = buf.slice(idx + 2);
+            const lines = frame.split('\n');
+            let evName = 'message';
+            let dataStr = '';
+            for (const line of lines) {
+              if (line.startsWith('event:')) evName = line.slice(6).trim();
+              if (line.startsWith('data:')) dataStr += line.slice(5).trim();
+            }
+
+            if (evName === 'phase_start' || evName === 'phase_end') handlePhase(evName, dataStr);
+            else if (evName === 'note') handleNote(dataStr);
+            else if (evName === 'artifact') handleArtifact(dataStr);
+            else if (evName === 'update') handleUpdate(dataStr);
+            else if (evName === 'complete') handleComplete(dataStr);
+            else if (evName === 'token_delta') handleTokenDelta(dataStr);
+            else if (evName === 'stream_start' || evName === 'stream_end') handleStreamStartEnd(evName);
+            else if (evName === 'debug_log') handleDebugLog(dataStr);
+            else if (evName === 'debug_token_delta') handleDebugTokenDelta(dataStr);
+            else if (evName === 'error') appendLine(`[错误] ${dataStr}`);
+          }
+        }
+      } catch (err) {
+        outputLog.textContent += `\n发生网络错误: ${err}`;
+      } finally {
+        allButtons.forEach(btn => btn.disabled = false);
+      }
+    }
+
+    btnFullCatalog.addEventListener('click', () => runStream('generate_full_catalog'));
+    btnFramework.addEventListener('click', () => runStream('extract_framework'));
+    btnBusiness.addEventListener('click', () => runStream('generate_business_catalog'));
+    btnPricing.addEventListener('click', () => runStream('generate_pricing_catalog'));
+    btnTechnical.addEventListener('click', () => runStream('generate_technical_catalog'));
+
+  </script>
+</body>
+
+</html>
