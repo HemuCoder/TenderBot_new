@@ -36,9 +36,9 @@ python -m uvicorn tender_analysis.main:app --reload --port 8002 &
 TENDER_PID=$!
 sleep 2
 
-# 启动目录生成服务 (端口8001)
-echo -e "${YELLOW}[4/4] 启动目录生成服务 (端口8001)...${NC}"
-python -m uvicorn catalog_generation.api:app --reload --port 8001 &
+# 启动目录生成服务 (端口8001) - 使用重构版API
+echo -e "${YELLOW}[4/4] 启动目录生成服务 (端口8001) [V2 重构版]...${NC}"
+python -m uvicorn catalog_generation.api_v2:app --reload --port 8001 &
 CATALOG_PID=$!
 sleep 2
 

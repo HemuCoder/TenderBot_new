@@ -39,6 +39,10 @@ INPUT_PATHS = {
 
 OUTPUT_PATHS = {
     "format_framework": os.path.join(_OUTPUT_DIR, "format_framework.json"),
+    "format_framework_compensated": os.path.join(_OUTPUT_DIR, "format_framework_compensated.json"),  # 补偿后的完整框架
+    "business_framework": os.path.join(_OUTPUT_DIR, "business_framework.json"),  # 商务视图
+    "technical_framework": os.path.join(_OUTPUT_DIR, "technical_framework.json"),  # 技术视图
+    "pricing_framework": os.path.join(_OUTPUT_DIR, "pricing_framework.json"),  # 报价视图
     "business_catalog_intermediate": os.path.join(_OUTPUT_DIR, "business_catalog_intermediate.json"),
     "business_catalog": os.path.join(_OUTPUT_DIR, "business_catalog_final.json"),
     "business_catalog_linked": os.path.join(_OUTPUT_DIR, "business_catalog_final_linked.json"),

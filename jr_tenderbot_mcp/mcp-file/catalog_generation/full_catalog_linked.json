@@ -5,7 +5,7 @@
       {
         "name": "投标函",
         "children": [],
-        "content_description": "这是一个文字模板，需要填写招标人名称/代理机构名称、项目名称、包号、招标编号、授权代表姓名职务、投标单位名称、投标报价（含大写）、投标保证金金额（含大写）、投标人盖章、通讯地址、邮政编码、联系电话、传真和投标日期。模板正文包含投标承诺及投标保证金不退还等条款。",
+        "content_description": "这是一个文字模板，需要填写招标人名称/代理机构名称、项目名称（含包号）、投标人授权代表姓名职务、投标单位名称，投标保证金人民币金额（数字及大写），投标人盖章，通讯地址，邮政编码，联系电话，传真，投标日期。文中含承诺内容和投标保证金不退还情况的条款。",
         "id": "bus_001_001",
         "level": 2,
         "linked_template_ids": [
@@ -16,7 +16,7 @@
         "name": "法定代表人授权书",
         "children": [
           {
-            "name": "法定代表人授权书正文",
+            "name": "法定代表人授权书文本模板",
             "children": [],
             "content_description": "",
             "id": "bus_001_002_001",
@@ -36,7 +36,7 @@
             ]
           },
           {
-            "name": "委托代理人身份证扫描件",
+            "name": "委托代理人身份证扫描件（正反面加盖投标人印章）",
             "children": [],
             "content_description": "",
             "id": "bus_001_002_003",
@@ -44,7 +44,7 @@
             "linked_template_ids": []
           },
           {
-            "name": "外籍人士护照复印件",
+            "name": "外籍人士护照复印件（如适用）",
             "children": [],
             "content_description": "",
             "id": "bus_001_002_004",
@@ -52,14 +52,14 @@
             "linked_template_ids": []
           }
         ],
-        "content_description": "这是一个文字模板，需要填写法定代表人姓名、投标人全称、代理人姓名、项目名称、招标编号，签字和盖章。正文中说明委托期限、代理权限及无转委托权。附加要求提供法定代表人身份证扫描件、委托代理人身份证扫描件（统一盖章），外籍人士提供护照复印件。",
+        "content_description": "这是一个文字模板，需要填写招标人名称/代理机构名称，法定代表人姓名，投标人全称，代理人姓名，项目名称及招标编号，授权期限起止时间。签字盖章处包括法定代表人签字，身份证号码，授权代表签字，身份证号码，投标人名称盖章，投标日期。同时明确要求附加材料：法定代表人身份证扫描件、委托代理人身份证扫描件（身份证正反面复印件加盖投标人印章），若为外籍人士则提供护照复印件。",
         "id": "bus_001_002",
         "level": 2
       },
       {
         "name": "法定代表身份证明",
         "children": [],
-        "content_description": "这是一个文字模板，需要填写投标人名称、法定代表人姓名、性别、年龄、职务，确认其法定代表人身份并签章。附加提供法定代表人身份证扫描件，且身份证复印件需加盖投标人印章；外籍人士提供护照复印件。",
+        "content_description": "这是一个文字模板，需要填写投标人名称、法定代表人姓名、性别、年龄、职务，确认其为投标人法定代表人。签署单位投标人盖章及投标日期。附加材料要求：法定代表人身份证扫描件（身份证正反面复印件加盖投标人印章），若为外籍人士则提供护照复印件。",
         "id": "bus_001_003",
         "level": 2,
         "linked_template_ids": []
@@ -67,7 +67,7 @@
       {
         "name": "项目要求应答表",
         "children": [],
-        "content_description": "这是一个模板表格，包含栏目“序号”“招标文件要求”“投标文件应答”“偏离说明”，投标文件应答需要填写“满足/部分满足/不满足”，偏离说明填写“无偏离/正偏离/负偏离”及偏离内容。模板说明要求投标人根据招标文件技术、服务、商务、合同条款等内容进行应答，明确承诺真实性及法律责任。应答表多页需逐页盖章。",
+        "content_description": "这是一个表格模板，包含序号、招标文件要求、投标文件应答（需填写满足/部分满足/不满足）、偏离说明（需填写无偏离/正偏离/负偏离）等列。表格说明应投标人根据招标文件相关章节内容进行应答，严格填写且不得虚假，需盖章确认。附有多条详细填表及承诺说明条款。投标人名称盖章及投标日期需要填写。",
         "id": "bus_001_004",
         "level": 2,
         "linked_template_ids": [
@@ -78,9 +78,9 @@
         "name": "类似项目业绩表（如有）",
         "children": [
           {
-            "name": "类似项目业绩表填写模板",
+            "name": "类似项目业绩表",
             "children": [],
-            "content_description": "",
+            "content_description": "填写类似项目的业绩信息表格，包含业主信息、合同信息和发票信息等，投标人名称盖章及日期必填。",
             "id": "bus_001_005_001",
             "level": 3,
             "linked_template_ids": [
@@ -88,23 +88,23 @@
             ]
           },
           {
-            "name": "案例证明材料",
+            "name": "发票明细清单",
             "children": [],
-            "content_description": "",
+            "content_description": "同一合同对应多张发票时，需另附详细的发票明细清单，确保发票信息完整且不遗漏。",
             "id": "bus_001_005_002",
             "level": 3,
             "linked_template_ids": []
           },
           {
-            "name": "明细清单",
+            "name": "案例证明材料",
             "children": [],
-            "content_description": "",
+            "content_description": "招标文件相关章节要求的业绩证明材料，如合同扫描件、验收证明、业主确认函等，需扫描清晰并加盖合同真实性章。",
             "id": "bus_001_005_003",
             "level": 3,
             "linked_template_ids": []
           }
         ],
-        "content_description": "这是一个模板表格，包含“序号”“合同/项目名称”“业主信息”“合同信息”“项目需求简要描述”“发票信息”“备注”“对应页码”等栏目。业主信息及发票信息中含需要填写具体名称、地址、联系人电话、授予时间、完成时间、发票代码、发票号码、开票日期、金额及校验码等。注释中提到可另附案例证明材料及明细清单。",
+        "content_description": "这是一个表格模板，包含序号、合同/项目名称、业主信息（业主名称、单位地址、联系人电话）、合同信息（授予时间、完成时间）、项目需求简要描述、发票信息（发票代码、发票号码、开票日期、开具金额、后6位校验码）、备注、对应页码等列。说明如同一合同对应多个发票需另附明细清单，表后需附招标文件相关章节要求的案例证明材料。投标人名称盖章及日期需要填写。",
         "id": "bus_001_005",
         "level": 2
       },
@@ -138,7 +138,7 @@
       {
         "name": "开标一览表",
         "children": [],
-        "content_description": "我看到一个表格模板，包含项目名称、招标编号、序号、采购内容和总价报价（元），表格下方注释要求：1.开标一览表为多页，每页均需法定代表人或授权代表签字并盖章；2.开标一览表以包为单位填写；3.总价报价计算公式。投标人需盖章，法定代表人或授权代表签字，并填写投标日期。",
+        "content_description": "我看到一个带表格的模板，表格含项目名称、招标编号、序号、采购内容和总价报价（元）栏。注释说明开标一览表为多页文件，每页需法定代表人或授权代表签字并盖章，且以包为单位填写。需要投标人填写采购内容和总价报价。表格下方有需投标人盖章、法定代表人签字和投标日期的填空。",
         "linked_template_ids": [
           "tpl_62e513d9"
         ]
@@ -149,7 +149,7 @@
           {
             "name": "劳务派遣服务报价",
             "children": [],
-            "content_description": "我看到一个包含文字说明和表格的报价模板。表格项目包括用工类型、岗位、预测人数预算、两年费用、两年合计管理费和两年费用合计报价。注释说明两年费用为固定价，投标人需报价管理费，管理费有最高限价。投标人需填写表格报价和盖章，法定代表人或授权代表签字，填写投标日期。",
+            "content_description": "我看到一个带表格的报价明细表模板，表格包含用工类型、岗位、预测人数预算（人）、两年费用（元）、两年合计管理费（元）、两年费用合计报价（元）六列。注释说明两年费用为固定价，投标人需填写管理费和计算两年费用合计报价，两年管理费不超过30元/人/月。表格示例中提供了岗位和费用的数据，投标人需据实填写相关报价。",
             "linked_template_ids": [
               "tpl_4670a6e1"
             ]
@@ -157,7 +157,7 @@
           {
             "name": "劳务外包报价",
             "children": [],
-            "content_description": "我看到一个包含文字说明和表格的报价模板。表格包含用工类型、岗位、预测人数预算、人均年费用最高限价、人均年费用最低限价、两年费用合计报价及备注。注释说明外包服务费包含外包人员费用，管理费按岗位类型有最高限价。投标人应填写表格，盖章并由法定代表人或授权代表签字，填写投标日期。",
+            "content_description": "我看到一个带表格的报价明细表模板，表格包含用工类型、岗位、预测人数预算（人）、人均年费用最高限价、人均年费用最低限价、两年费用合计报价及备注栏。注释中说明外包服务费含在外包人员费用里，不同岗位管理费上限不同。表格中部分栏目为空，投标人需填写两年费用合计报价。格式清晰，属于报价填报模板。",
             "linked_template_ids": [
               "tpl_8c880cf1"
             ]
@@ -170,48 +170,6 @@
     "name": "商务技术响应文件",
     "description": "",
     "children": [
-      {
-        "name": "类似项目业绩表（如有）",
-        "description": "",
-        "children": [
-          {
-            "name": "类似项目业绩与佐证材料",
-            "description": "",
-            "children": [
-              {
-                "name": "合同关键页复印件及公章",
-                "description": "",
-                "children": [],
-                "id": "tech_001_001_001_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "增值税发票复印件及公章",
-                "description": "",
-                "children": [],
-                "id": "tech_001_001_001_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "项目验收报告及客户确认函",
-                "description": "",
-                "children": [],
-                "id": "tech_001_001_001_003",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_001_001",
-            "level": 3,
-            "linked_template_ids": []
-          }
-        ],
-        "id": "tech_001_001",
-        "level": 2,
-        "linked_template_ids": []
-      },
       {
         "name": "项目实施方案（服务类项目）",
         "description": "",
@@ -228,7 +186,7 @@
                     "name": "项目界定及服务内容：",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_001_001",
+                    "id": "tech_001_001_001_001_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -236,7 +194,7 @@
                     "name": "工作任务及目标",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_001_002",
+                    "id": "tech_001_001_001_001_002",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -244,12 +202,12 @@
                     "name": "工作重点及难点",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_001_003",
+                    "id": "tech_001_001_001_001_003",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_001_001",
+                "id": "tech_001_001_001_001",
                 "level": 4,
                 "linked_template_ids": []
               },
@@ -261,7 +219,7 @@
                     "name": "整体服务流程：",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_002_001",
+                    "id": "tech_001_001_001_002_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -269,7 +227,7 @@
                     "name": "进场服务流程",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_002_002",
+                    "id": "tech_001_001_001_002_002",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -277,12 +235,12 @@
                     "name": "退场服务流程",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_002_003",
+                    "id": "tech_001_001_001_002_003",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_001_002",
+                "id": "tech_001_001_001_002",
                 "level": 4,
                 "linked_template_ids": []
               },
@@ -294,7 +252,7 @@
                     "name": "转移前置准备",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_003_001",
+                    "id": "tech_001_001_001_003_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -302,7 +260,7 @@
                     "name": "转移落地实施",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_003_002",
+                    "id": "tech_001_001_001_003_002",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -310,17 +268,840 @@
                     "name": "转移风险预案举措",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_001_003_003",
+                    "id": "tech_001_001_001_003_003",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_001_003",
+                "id": "tech_001_001_001_003",
                 "level": 4,
                 "linked_template_ids": []
               }
             ],
-            "id": "tech_001_002_001",
+            "id": "tech_001_001_001",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "履约能力及资质证明",
+            "description": "",
+            "children": [
+              {
+                "name": "类似项目业绩证明",
+                "description": "",
+                "children": [
+                  {
+                    "name": "合同关键页及加盖公章材料",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "增值税发票复印件及加盖公章材料",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "相关佐证材料（验收报告、客户确认函等）",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_001_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_002_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "质量管理体系及相关证书",
+                "description": "",
+                "children": [
+                  {
+                    "name": "质量管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "环境管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "职业健康安全管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "信息安全管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "食品安全管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_005",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "社会责任管理体系认证证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_002_002_006",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_002_002",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_002",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "履约质量管理",
+            "description": "",
+            "children": [
+              {
+                "name": "实施团队资质及证书",
+                "description": "",
+                "children": [
+                  {
+                    "name": "项目负责人资质资料",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_003_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "管理人员资质证书及身份证",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_003_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "服务人员劳动关系协调师证书",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_003_001_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "资格证书真实性证明",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_003_001_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_003_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "服务方案",
+                "description": "",
+                "children": [
+                  {
+                    "name": "人员管理制度",
+                    "description": "",
+                    "children": [
+                      {
+                        "name": "内部管理制度",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_001_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "福利保障制度",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_001_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "保密安全制度",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_001_003",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "考勤制度",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_001_004",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "绩效考核制度",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_001_005",
+                        "level": 6,
+                        "linked_template_ids": []
+                      }
+                    ],
+                    "id": "tech_001_001_003_002_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "派遣外包方案",
+                    "description": "",
+                    "children": [
+                      {
+                        "name": "大堂经理外包服务方案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "网点营销助理外包服务方案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "炊事保洁外包服务方案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_003",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "驾驶员派遣服务方案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_004",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "工勤人员外包服务方案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_005",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "应急预案（消防、交通、突发事件、自然灾害等）",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_003_002_002_006",
+                        "level": 6,
+                        "linked_template_ids": []
+                      }
+                    ],
+                    "id": "tech_001_001_003_002_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_003_002",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_003",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "服务费用及报价管理",
+            "description": "",
+            "children": [
+              {
+                "name": "劳务派遣费用报价及管理费要求",
+                "description": "",
+                "children": [
+                  {
+                    "name": "劳务派遣费用构成说明",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_004_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "管理费报价限制",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_004_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_004_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "劳务外包服务费用报价及管理费要求",
+                "description": "",
+                "children": [
+                  {
+                    "name": "不同岗位管理费标准",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_004_002_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_004_002",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_004",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "人员管理与服务标准",
+            "description": "",
+            "children": [
+              {
+                "name": "劳务派遣人员岗位管理",
+                "description": "",
+                "children": [
+                  {
+                    "name": "岗位安排与及时响应机制",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "岗位人员简历及证件管理",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_005_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "培训计划及实施",
+                "description": "",
+                "children": [
+                  {
+                    "name": "职业道德培训",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_002_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "安全消防培训",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_002_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "银行服务礼仪培训",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_002_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "培训签到表与资料存档",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_002_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_005_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "合法用工与劳动合同管理",
+                "description": "",
+                "children": [
+                  {
+                    "name": "劳动合同范本及社保缴纳凭证",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_003_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "劳动合同变更及变更办理流程",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_005_003_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_005_003",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_005",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "规章制度及项目管理体系",
+            "description": "",
+            "children": [
+              {
+                "name": "服务规章制度文本",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_006_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "外包服务方案及应急预案文件",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_006_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "服务与项目管理流程",
+                "description": "",
+                "children": [
+                  {
+                    "name": "人员配备标准",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "服务质量评价体系",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "风险控制措施",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "投诉处理程序",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "业务考核标准",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_005",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "数据统计与管理方法",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_006_003_006",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_006_003",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "服务质量保障及服务质量投诉声明",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_006_004",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "经营场所与设备证明材料",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_006_005",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_006",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "关键岗位人员资质要求",
+            "description": "",
+            "children": [
+              {
+                "name": "大堂经理资格要求与证明材料",
+                "description": "",
+                "children": [
+                  {
+                    "name": "身份证、户口本、毕业证、驾驶证",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_007_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "体检报告",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_007_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "无犯罪证明",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_007_001_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "无不良信用证明",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_007_001_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "普通话测试合格证明或形式审查材料",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_007_001_005",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_007_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "厨师资质要求及健康证",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_007_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "服务人员健康证管理",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_007_003",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_007",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "服务标准与考核管理",
+            "description": "",
+            "children": [
+              {
+                "name": "人事管理体系文件",
+                "description": "",
+                "children": [
+                  {
+                    "name": "劳动合同管理",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_008_001_001",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "工资支付",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_008_001_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "社保缴纳证明",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_008_001_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  }
+                ],
+                "id": "tech_001_001_008_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "人员档案及入职手续管理",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "专职管理人员配置及职责说明",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_003",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "劳务人员考核制度及奖惩办法",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_004",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "劳资纠纷处理流程及法律支持",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_005",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "接受采购人检查与考核机制",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_006",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "职业道德及岗位技术培训计划",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_007",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "岗位需求响应机制及候选人提供",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_008",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "跨派遣禁止规定及监督措施",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_009",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "劳动合同变更解除协商流程",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_010",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "党组织关系管理制度及人员名单",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_011",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "客户反馈收集与整改流程",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_008_012",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_008",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "运营架构与团队管理",
+            "description": "",
+            "children": [
+              {
+                "name": "团队成员名单及岗位职责",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "员工管理、工资及考核制度",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "团队入场计划及相关会议纪要",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_003",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "人员岗位稳定性及调岗管理",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_004",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "临时交办工作响应机制",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_005",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "岗位调整管理规定与备案",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_006",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "团队建设及服务方案符合性说明",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_009_007",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_009",
+            "level": 3,
+            "linked_template_ids": []
+          },
+          {
+            "name": "遵守国家标准及认证要求",
+            "description": "",
+            "children": [
+              {
+                "name": "投标人承诺书",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_010_001",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "国家强制性产品认证证书复印件",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_010_002",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "包装符合法律法规证明及承诺",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_010_003",
+                "level": 4,
+                "linked_template_ids": []
+              },
+              {
+                "name": "产品及服务符合国家及行业标准的证明",
+                "description": "",
+                "children": [],
+                "id": "tech_001_001_010_004",
+                "level": 4,
+                "linked_template_ids": []
+              }
+            ],
+            "id": "tech_001_001_010",
             "level": 3,
             "linked_template_ids": []
           },
@@ -336,7 +1117,7 @@
                     "name": "员工入职管理",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_001",
+                    "id": "tech_001_001_011_001_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -344,7 +1125,7 @@
                     "name": "劳动关系管理",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_002",
+                    "id": "tech_001_001_011_001_002",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -352,7 +1133,7 @@
                     "name": "薪酬福利管理",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_003",
+                    "id": "tech_001_001_011_001_003",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -360,7 +1141,7 @@
                     "name": "休息休假",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_004",
+                    "id": "tech_001_001_011_001_004",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -368,7 +1149,7 @@
                     "name": "安全守则",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_005",
+                    "id": "tech_001_001_011_001_005",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -376,7 +1157,7 @@
                     "name": "离职管理",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_006",
+                    "id": "tech_001_001_011_001_006",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -388,7 +1169,7 @@
                         "name": "工作汇报：",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_002_001_007_001",
+                        "id": "tech_001_001_011_001_007_001",
                         "level": 6,
                         "linked_template_ids": []
                       },
@@ -396,7 +1177,7 @@
                         "name": "员工信息沟通",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_002_001_007_002",
+                        "id": "tech_001_001_011_001_007_002",
                         "level": 6,
                         "linked_template_ids": []
                       },
@@ -404,7 +1185,7 @@
                         "name": "客户信息沟通",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_002_001_007_003",
+                        "id": "tech_001_001_011_001_007_003",
                         "level": 6,
                         "linked_template_ids": []
                       },
@@ -412,12 +1193,12 @@
                         "name": "投诉处理：",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_002_001_007_004",
+                        "id": "tech_001_001_011_001_007_004",
                         "level": 6,
                         "linked_template_ids": []
                       }
                     ],
-                    "id": "tech_001_002_002_001_007",
+                    "id": "tech_001_001_011_001_007",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -425,7 +1206,7 @@
                     "name": "激励运作机制",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_008",
+                    "id": "tech_001_001_011_001_008",
                     "level": 5,
                     "linked_template_ids": []
                   },
@@ -433,1133 +1214,383 @@
                     "name": "其他保障措施",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_002_001_009",
+                    "id": "tech_001_001_011_001_009",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_002_001",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_002",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "外包人员招聘及培训",
-            "description": "",
-            "children": [
-              {
-                "name": "员工招聘流程及服务",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_003_001",
+                "id": "tech_001_001_011_001",
                 "level": 4,
                 "linked_template_ids": []
               },
               {
-                "name": "员工培训",
+                "name": "外包人员招聘及培训",
                 "description": "",
                 "children": [
                   {
-                    "name": "员工岗前培训管理",
+                    "name": "员工招聘流程及服务",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_003_002_001",
+                    "id": "tech_001_001_011_002_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
                   {
-                    "name": "员工在职培训管理",
+                    "name": "员工培训",
                     "description": "",
                     "children": [
                       {
-                        "name": "附表：培训流程",
+                        "name": "员工岗前培训管理",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_003_002_002_001",
+                        "id": "tech_001_001_011_002_002_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "员工在职培训管理",
+                        "description": "",
+                        "children": [
+                          {
+                            "name": "附表：培训流程",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_002_002_002_001",
+                            "level": 7,
+                            "linked_template_ids": []
+                          }
+                        ],
+                        "id": "tech_001_001_011_002_002_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "培训管理",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_002_002_003",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "培训时间",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_002_002_004",
                         "level": 6,
                         "linked_template_ids": []
                       }
                     ],
-                    "id": "tech_001_002_003_002_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "培训管理",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_003_002_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "培训时间",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_003_002_004",
+                    "id": "tech_001_001_011_002_002",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_003_002",
+                "id": "tech_001_001_011_002",
                 "level": 4,
                 "linked_template_ids": []
               },
               {
-                "name": "培训计划及记录",
+                "name": "外包人员安全保障",
                 "description": "",
                 "children": [
                   {
-                    "name": "职业道德、安全消防、银行服务礼仪培训计划",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_003_003_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "培训签到表及培训资料存档",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_003_003_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_003_003",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_003",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "外包人员安全保障",
-            "description": "",
-            "children": [
-              {
-                "name": "业务风险管控",
-                "description": "",
-                "children": [
-                  {
-                    "name": "恶劣天气应对",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_001_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "临时检查应对",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_001_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "公共卫生危机应对",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_001_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "疫情防控应对",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_001_004",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_004_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "员工风险管控",
-                "description": "",
-                "children": [
-                  {
-                    "name": "员工入职风险管理规定",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_002_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "员工在职风险管理规定",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_002_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "员工离职风险管理规定",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_002_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "舆情风险",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_002_004",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_004_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "合理化建议",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_003",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "应急方案",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_004",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "工伤、异常处理方案",
-                "description": "",
-                "children": [
-                  {
-                    "name": "外包员工工伤意外处理",
+                    "name": "业务风险管控",
                     "description": "",
                     "children": [
                       {
-                        "name": "预防措施",
+                        "name": "恶劣天气应对",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_004_005_001_001",
+                        "id": "tech_001_001_011_003_001_001",
                         "level": 6,
                         "linked_template_ids": []
                       },
                       {
-                        "name": "管理原则：",
+                        "name": "临时检查应对",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_004_005_001_002",
+                        "id": "tech_001_001_011_003_001_002",
                         "level": 6,
                         "linked_template_ids": []
                       },
                       {
-                        "name": "处理原则：",
+                        "name": "公共卫生危机应对",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_004_005_001_003",
+                        "id": "tech_001_001_011_003_001_003",
                         "level": 6,
                         "linked_template_ids": []
                       },
                       {
-                        "name": "紧急救治：",
+                        "name": "疫情防控应对",
                         "description": "",
                         "children": [],
-                        "id": "tech_001_002_004_005_001_004",
-                        "level": 6,
-                        "linked_template_ids": []
-                      },
-                      {
-                        "name": "协助后续跟进：",
-                        "description": "",
-                        "children": [],
-                        "id": "tech_001_002_004_005_001_005",
-                        "level": 6,
-                        "linked_template_ids": []
-                      },
-                      {
-                        "name": "处理结果：",
-                        "description": "",
-                        "children": [],
-                        "id": "tech_001_002_004_005_001_006",
-                        "level": 6,
-                        "linked_template_ids": []
-                      },
-                      {
-                        "name": "申报工伤需准备的材料",
-                        "description": "",
-                        "children": [],
-                        "id": "tech_001_002_004_005_001_007",
+                        "id": "tech_001_001_011_003_001_004",
                         "level": 6,
                         "linked_template_ids": []
                       }
                     ],
-                    "id": "tech_001_002_004_005_001",
+                    "id": "tech_001_001_011_003_001",
                     "level": 5,
                     "linked_template_ids": []
                   },
                   {
-                    "name": "员工突发事件管理",
+                    "name": "员工风险管控",
+                    "description": "",
+                    "children": [
+                      {
+                        "name": "员工入职风险管理规定",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_002_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "员工在职风险管理规定",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_002_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "员工离职风险管理规定",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_002_003",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "舆情风险",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_002_004",
+                        "level": 6,
+                        "linked_template_ids": []
+                      }
+                    ],
+                    "id": "tech_001_001_011_003_002",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "合理化建议",
                     "description": "",
                     "children": [],
-                    "id": "tech_001_002_004_005_002",
+                    "id": "tech_001_001_011_003_003",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "应急方案",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_004",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "工伤、异常处理方案",
+                    "description": "",
+                    "children": [
+                      {
+                        "name": "外包员工工伤意外处理",
+                        "description": "",
+                        "children": [
+                          {
+                            "name": "预防措施",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_001",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "管理原则：",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_002",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "处理原则：",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_003",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "紧急救治：",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_004",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "协助后续跟进：",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_005",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "处理结果：",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_006",
+                            "level": 7,
+                            "linked_template_ids": []
+                          },
+                          {
+                            "name": "申报工伤需准备的材料",
+                            "description": "",
+                            "children": [],
+                            "id": "tech_001_001_011_003_005_001_007",
+                            "level": 7,
+                            "linked_template_ids": []
+                          }
+                        ],
+                        "id": "tech_001_001_011_003_005_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "员工突发事件管理",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_005_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      }
+                    ],
+                    "id": "tech_001_001_011_003_005",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "各类事项处理预案",
+                    "description": "",
+                    "children": [
+                      {
+                        "name": "伤亡处理预案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_006_001",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "劳动纠纷处理预案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_006_002",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "公共事务处理预案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_006_003",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "网络信息泄露预案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_006_004",
+                        "level": 6,
+                        "linked_template_ids": []
+                      },
+                      {
+                        "name": "纸质信息泄露预案",
+                        "description": "",
+                        "children": [],
+                        "id": "tech_001_001_011_003_006_005",
+                        "level": 6,
+                        "linked_template_ids": []
+                      }
+                    ],
+                    "id": "tech_001_001_011_003_006",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "异常事件分类分级",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_007",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "异常事件处理流程及分工",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_008",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "劳动争议事件处理流程",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_009",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "劳动争议常见问题解答",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_010",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "员工退回处理流程",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_011",
+                    "level": 5,
+                    "linked_template_ids": []
+                  },
+                  {
+                    "name": "员工投诉处理",
+                    "description": "",
+                    "children": [],
+                    "id": "tech_001_001_011_003_012",
                     "level": 5,
                     "linked_template_ids": []
                   }
                 ],
-                "id": "tech_001_002_004_005",
+                "id": "tech_001_001_011_003",
                 "level": 4,
                 "linked_template_ids": []
               },
               {
-                "name": "各类事项处理预案",
-                "description": "",
-                "children": [
-                  {
-                    "name": "伤亡处理预案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_006_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "劳动纠纷处理预案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_006_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "公共事务处理预案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_006_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "网络信息泄露预案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_006_004",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "纸质信息泄露预案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_004_006_005",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_004_006",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "异常事件分类分级",
+                "name": "外包人员廉政保障措施",
                 "description": "",
                 "children": [],
-                "id": "tech_001_002_004_007",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "异常事件处理流程及分工",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_008",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳动争议事件处理流程",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_009",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳动争议常见问题解答",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_010",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "员工退回处理流程",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_011",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "员工投诉处理",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_004_012",
+                "id": "tech_001_001_011_004",
                 "level": 4,
                 "linked_template_ids": []
               }
             ],
-            "id": "tech_001_002_004",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "服务标准及考核管理",
-            "description": "",
-            "children": [
-              {
-                "name": "人事管理体系",
-                "description": "",
-                "children": [
-                  {
-                    "name": "劳动合同管理",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_001_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "工资支付及社保证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_001_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "人员档案及入职手续管理",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_005_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "管理人员配置及职责",
-                "description": "",
-                "children": [
-                  {
-                    "name": "专职管理人员名单及职责说明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_003_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_003",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳务人员规章制度及考核",
-                "description": "",
-                "children": [
-                  {
-                    "name": "劳务人员考核制度及奖惩规定",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_004_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "劳资纠纷处理流程及法律支持",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_004_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_004",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "接受采购人检查与考核",
-                "description": "",
-                "children": [
-                  {
-                    "name": "检查考核的响应机制及报告流程",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_005_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_005",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "岗位需求响应及人员派遣管理",
-                "description": "",
-                "children": [
-                  {
-                    "name": "岗位需求响应机制及候选人资料管理",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_006_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "禁止跨派遣管理规定及监督措施",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_006_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_006",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳动合同变更解除管理",
-                "description": "",
-                "children": [
-                  {
-                    "name": "合同变更与解除协商流程及记录模板",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_007_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_007",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "党组织关系管理",
-                "description": "",
-                "children": [
-                  {
-                    "name": "党组织关系管理制度及相关人员名单",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_008_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_008",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "客户反馈收集与整改",
-                "description": "",
-                "children": [
-                  {
-                    "name": "反馈收集与整改流程制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_005_009_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_005_009",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_005",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "供应商运营架构及团队管理",
-            "description": "",
-            "children": [
-              {
-                "name": "团队成员组成及职责",
-                "description": "",
-                "children": [
-                  {
-                    "name": "团队名单及岗位职责",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_001_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "项目负责人资质证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_001_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "员工管理与考核制度",
-                "description": "",
-                "children": [
-                  {
-                    "name": "员工管理制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_002_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "工资发放制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_002_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "考核办法",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_002_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "团队入场计划及稳定性保障",
-                "description": "",
-                "children": [
-                  {
-                    "name": "入场计划及会议纪要",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_003_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "人员稳定性承诺与调岗管理制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_003_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_003",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "临时交办工作配合机制",
-                "description": "",
-                "children": [
-                  {
-                    "name": "临时任务响应机制及执行记录",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_004_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_004",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "岗位调整管理",
-                "description": "",
-                "children": [
-                  {
-                    "name": "岗位调整管理规定及备案表",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_005_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_005",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "服务方案一致性保证",
-                "description": "",
-                "children": [
-                  {
-                    "name": "团队建设及服务方案符合招标需求的说明与承诺",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_006_006_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_006_006",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_006",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "针对服务方案的详细设计",
-            "description": "",
-            "children": [
-              {
-                "name": "人员管理制度",
-                "description": "",
-                "children": [
-                  {
-                    "name": "内部管理制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_001_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "福利保障制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_001_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "保密安全制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_001_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "考勤制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_001_004",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "绩效考核制度",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_001_005",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_007_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "派遣外包方案",
-                "description": "",
-                "children": [
-                  {
-                    "name": "大堂经理外包服务方案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "网点营销助理外包服务方案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "炊事保洁外包服务方案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "驾驶员派遣服务方案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_004",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "工勤人员外包服务方案",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_005",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "应急预案（消防、交通、突发公共事件、自然灾害等）",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_002_006",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_007_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳务派遣及外包费用报价方案",
-                "description": "",
-                "children": [
-                  {
-                    "name": "劳务派遣费用报价及管理费说明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_003_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "劳务外包服务费用报价及管理费说明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_003_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_007_003",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "劳务人员岗位管理与供应流程",
-                "description": "",
-                "children": [
-                  {
-                    "name": "岗位分类管理及费用控制",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_004_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "三工作日内人员配备流程及相关证件提交",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_002_007_004_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_002_007_004",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_007",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "设备与经营场所管理",
-            "description": "",
-            "children": [
-              {
-                "name": "服务场所证明及租赁合同",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_008_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "设备配备清单",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_008_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "人员固定性说明",
-                "description": "",
-                "children": [],
-                "id": "tech_001_002_008_003",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_002_008",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "外包人员廉政保障措施",
-            "description": "",
-            "children": [],
-            "id": "tech_001_002_009",
+            "id": "tech_001_001_011",
             "level": 3,
             "linked_template_ids": []
           }
         ],
-        "id": "tech_001_002",
-        "level": 2,
-        "linked_template_ids": []
-      },
-      {
-        "name": "履约能力与资质证明",
-        "description": "",
-        "children": [
-          {
-            "name": "质量管理体系及相关管理体系认证",
-            "description": "",
-            "children": [
-              {
-                "name": "质量管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "环境管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "职业健康安全管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_003",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "信息安全管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_004",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "食品安全管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_005",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "社会责任管理体系认证证书",
-                "description": "",
-                "children": [],
-                "id": "tech_001_003_001_006",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_003_001",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "实施团队资质及关键岗位人员资格",
-            "description": "",
-            "children": [
-              {
-                "name": "项目负责人及管理人员资质",
-                "description": "",
-                "children": [
-                  {
-                    "name": "项目负责人证书及身份证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_001_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "管理人员证书及身份证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_001_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "资格证书真实性验证截图",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_001_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_003_002_001",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "服务人员劳动关系协调师证书",
-                "description": "",
-                "children": [
-                  {
-                    "name": "一级劳动关系协调师证书及身份证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_002_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "二级劳动关系协调师证书及身份证明",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_002_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_003_002_002",
-                "level": 4,
-                "linked_template_ids": []
-              },
-              {
-                "name": "关键岗位人员资格要求",
-                "description": "",
-                "children": [
-                  {
-                    "name": "大堂经理资格及证件材料",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_003_001",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "厨师证及健康证",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_003_002",
-                    "level": 5,
-                    "linked_template_ids": []
-                  },
-                  {
-                    "name": "服务人员健康证",
-                    "description": "",
-                    "children": [],
-                    "id": "tech_001_003_002_003_003",
-                    "level": 5,
-                    "linked_template_ids": []
-                  }
-                ],
-                "id": "tech_001_003_002_003",
-                "level": 4,
-                "linked_template_ids": []
-              }
-            ],
-            "id": "tech_001_003_002",
-            "level": 3,
-            "linked_template_ids": []
-          }
-        ],
-        "id": "tech_001_003",
-        "level": 2,
-        "linked_template_ids": []
-      },
-      {
-        "name": "遵守标准及认证材料",
-        "description": "",
-        "children": [
-          {
-            "name": "国家强制性产品认证承诺函",
-            "description": "",
-            "children": [],
-            "id": "tech_001_004_001",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "相关认证证书复印件及公章",
-            "description": "",
-            "children": [],
-            "id": "tech_001_004_002",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "包装法律法规符合证明及承诺",
-            "description": "",
-            "children": [],
-            "id": "tech_001_004_003",
-            "level": 3,
-            "linked_template_ids": []
-          },
-          {
-            "name": "产品及服务符合国家及行业标准证明材料",
-            "description": "",
-            "children": [],
-            "id": "tech_001_004_004",
-            "level": 3,
-            "linked_template_ids": []
-          }
-        ],
-        "id": "tech_001_004",
+        "id": "tech_001_001",
         "level": 2,
         "linked_template_ids": []
       }

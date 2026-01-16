@@ -1,0 +1,104 @@
+{
+    "business_template": {
+        "title": "商务文件",
+        "category": "business",
+        "insert_position_hint": "before_all",
+        "children": [
+            {
+                "title": "投标函",
+                "children": []
+            },
+            {
+                "title": "法定代表人身份证明",
+                "children": []
+            },
+            {
+                "title": "授权委托书",
+                "children": []
+            },
+            {
+                "title": "投标保证金",
+                "children": []
+            },
+            {
+                "title": "资格审查资料",
+                "children": [
+                    {
+                        "title": "营业执照",
+                        "children": []
+                    },
+                    {
+                        "title": "资质证书",
+                        "children": []
+                    },
+                    {
+                        "title": "管理体系认证",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "title": "财务状况表",
+                "children": []
+            },
+            {
+                "title": "类似项目业绩",
+                "children": []
+            },
+            {
+                "title": "拟委任人员",
+                "children": []
+            },
+            {
+                "title": "信誉情况",
+                "children": []
+            }
+        ]
+    },
+    "technical_template": {
+        "title": "技术文件",
+        "category": "technical",
+        "insert_position_hint": "between_business_pricing",
+        "children": [
+            {
+                "title": "项目理解",
+                "children": []
+            },
+            {
+                "title": "实施方案",
+                "children": []
+            },
+            {
+                "title": "质量保证措施",
+                "children": []
+            },
+            {
+                "title": "应急处理预案",
+                "children": []
+            },
+            {
+                "title": "人员培训方案",
+                "children": []
+            },
+            {
+                "title": "售后服务方案",
+                "children": []
+            }
+        ]
+    },
+    "pricing_template": {
+        "title": "报价文件",
+        "category": "pricing",
+        "insert_position_hint": "after_all",
+        "children": [
+            {
+                "title": "报价明细表",
+                "children": []
+            },
+            {
+                "title": "成本分析",
+                "children": []
+            }
+        ]
+    }
+}

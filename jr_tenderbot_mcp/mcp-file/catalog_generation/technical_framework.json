@@ -1,0 +1,20 @@
+[
+  {
+    "name": "商务技术响应文件",
+    "category": "mixed",
+    "children": [
+      {
+        "name": "项目实施方案（服务类项目）",
+        "content_description": "",
+        "category": "technical",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "技术方案",
+    "content_description": "这是补偿的默认技术方案模板，内容详细描述技术实施方案、技术措施、进度安排等。",
+    "category": "technical",
+    "children": []
+  }
+]

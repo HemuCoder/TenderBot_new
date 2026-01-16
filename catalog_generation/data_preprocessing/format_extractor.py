@@ -266,7 +266,6 @@ async def enrich_catalog_descriptions_event_generator(
         if not leaf_nodes:
             yield sse("warning", {"phase": "添加目录内容描述", "text": "未找到叶子节点，跳过描述添加。"})
             yield sse("phase_end", {"name": "添加目录内容描述"})
-            yield sse("complete", {"final_output": "目录内容描述添加完成！", "framework": format_framework})
             return
         
         yield sse("note", {"phase": "添加目录内容描述", "text": f"识别到 {len(leaf_nodes)} 个叶子节点，将分 {(len(leaf_nodes) + batch_size - 1) // batch_size} 批处理"})
@@ -376,8 +375,6 @@ async def enrich_catalog_descriptions_event_generator(
         yield sse("artifact", {"type": "file", "filename": settings.OUTPUT_PATHS["format_framework"]})
         yield sse("note", {"phase": "添加目录内容描述", "text": f"已更新 {settings.OUTPUT_PATHS['format_framework']} 文件。"})
         yield sse("phase_end", {"name": "添加目录内容描述"})
-        
-        yield sse("complete", {"final_output": "目录内容描述添加完成！", "framework": format_framework})
         
     except Exception as e:
         tb_str = traceback.format_exc()

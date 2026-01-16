@@ -18,6 +18,8 @@ from .data_preprocessing.format_extractor import (
     extract_format_framework_event_generator,
     enrich_catalog_descriptions_event_generator,
 )
+from .compensation.orchestrator import CompensationOrchestrator
+from .utils.mcp_utils import sse
 from .business_catalog.business_catalog_generator import generate_business_catalog_v2_event_generator
 from .technical_catalog.technical_catalog_generator import generate_technical_catalog_event_generator
 
@@ -65,9 +67,45 @@ async def event_generator(
         ):
             yield event
     
+    # 阶段1.8：目录补偿（新增）
+    yield sse("phase_start", {"name": "目录补偿与分类"})
+    
+    if format_framework:
+        try:
+            orchestrator = CompensationOrchestrator()
+            
+            # 准备日志文件路径
+            import os
+            log_dir = os.path.join(settings._OUTPUT_DIR, "logs")
+            os.makedirs(log_dir, exist_ok=True)
+            log_file = os.path.join(log_dir, "compensation_log.txt")
+            
+            yield sse("note", {"phase": "目录补偿", "text": f"开始分析和补偿目录结构,共 {len(format_framework)} 个顶层节点"})
+            
+            # 执行补偿
+            result = await orchestrator.run(format_framework, log_file=log_file)
+            
+            # 更新 format_framework
+            format_framework = result["compensated_structure"]
+            
+            yield sse("note", {"phase": "目录补偿", "text": f"补偿完成,来源: {result['source']}"})
+            yield sse("note", {"phase": "目录补偿", "text": f"最终结构: {len(format_framework)} 个顶层节点"})
+            
+            # 保存补偿后的结构
+            compensated_path = os.path.join(settings._OUTPUT_DIR, "format_framework_compensated.json")
+            with open(compensated_path, 'w', encoding='utf-8') as f:
+                json.dump(format_framework, f, ensure_ascii=False, indent=2)
+            
+            yield sse("artifact", {"type": "file", "filename": compensated_path})
+            
+        except Exception as e:
+            yield sse("warning", {"phase": "目录补偿", "text": f"补偿过程出错: {str(e)}"})
+    
+    yield sse("phase_end", {"name": "目录补偿与分类"})
+    
     # 阶段2：生成商务目录
     async for event in generate_business_catalog_v2_event_generator(
-        format_framework=None,
+        format_framework=format_framework,
         model_name=model_name,
         language=language
     ):

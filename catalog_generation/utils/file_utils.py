@@ -240,28 +240,75 @@ def build_nested_catalog(flat_list: List[Dict[str, Any]]) -> List[Dict[str, Any]
 
 
 def extract_business_section(full_catalog: List[Dict]) -> List[Dict]:
-    """从完整的目录框架中，只提取出"商务部分"的节点。"""
+    """
+    从完整的目录框架中提取商务部分节点
+    
+    优先使用 Agent 标注的 category 字段,回退到关键词匹配
+    """
+    result = []
     for node in full_catalog:
-        # 使用模糊匹配，避免因"第一部分"等前缀导致匹配失败
-        if "商务" in node.get("name", ""):
-            return [node] # 返回一个只包含商务节点的列表
-    return [] # 如果没找到，返回空列表
+        category = node.get("category", "")
+        # 优先使用 Agent 标注
+        if category == "business":
+            result.append(node)
+        # 回退到关键词匹配(兼容旧数据)
+        elif "商务" in node.get("name", ""):
+            result.append(node)
+    return result
 
 
 def extract_technical_section(full_catalog: List[Dict]) -> List[Dict]:
-    """从完整的目录框架中，只提取出"技术部分"的节点。"""
+    """
+    从完整的目录框架中提取技术部分节点
+    
+    优先使用 Agent 标注的 category 字段,回退到关键词匹配
+    """
+    result = []
     for node in full_catalog:
-        # 使用模糊匹配，避免因"第二部分"等前缀导致匹配失败
-        if "技术" in node.get("name", ""):
-            return [node] # 返回一个只包含技术节点的列表
-    return [] # 如果没找到，返回空列表
+        category = node.get("category", "")
+        # 优先使用 Agent 标注
+        if category == "technical":
+            result.append(node)
+        # 回退到关键词匹配(兼容旧数据)
+        elif "技术" in node.get("name", ""):
+            result.append(node)
+    return result
+
 
 def extract_section_as_json(full_catalog: List[Dict], section_keyword: str) -> List[Dict]:
-    """从完整的目录框架中，根据关键词提取特定部分。"""
+    """
+    从完整的目录框架中根据关键词或category提取特定部分
+    
+    Args:
+        full_catalog: 完整目录
+        section_keyword: 关键词,可以是 "business"/"technical"/"pricing" 或中文关键词
+    """
+    result = []
+    
+    # 映射关键词到category
+    keyword_to_category = {
+        "business": "business",
+        "商务": "business",
+        "technical": "technical",
+        "技术": "technical",
+        "pricing": "pricing",
+        "报价": "pricing"
+    }
+    
+    target_category = keyword_to_category.get(section_keyword)
+    
     for node in full_catalog:
-        if section_keyword in node.get("name", ""):
-            return [node]
-    return []
+        category = node.get("category", "")
+        name = node.get("name", "")
+        
+        # 优先匹配 category
+        if target_category and category == target_category:
+            result.append(node)
+        # 回退到名称匹配
+        elif section_keyword in name:
+            result.append(node)
+    
+    return result
 
 def convert_json_to_markdown(catalog_json: List[Dict], indent_level: int = 0, include_descriptions: bool = True) -> str:
     """
